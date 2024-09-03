@@ -25,8 +25,12 @@ class Transport implements ITransport{
             //     period: 'today'
             //   });
             // return response.data.horoscope;
-            console.log(language + "\n" + text + "\n");
-            return "перевод";
+            let newText = text;
+            if(language === "Мансийский"){
+                newText = text.toUpperCase();
+            }
+            return newText + "\n";
+        
         } catch (error) {
             if (axios.isAxiosError(error)) {
                 throw new Error(`transport.post: Error fetching data from API: ${error.response?.status} ${error.response?.statusText}`);

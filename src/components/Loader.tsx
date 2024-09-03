@@ -1,9 +1,8 @@
 
 import styles from "./styles/loader.module.scss";
-import { observer } from "mobx-react-lite";
 import loaderGif from "./../assets/loading-50.gif";
 
-const Loader = observer(() => {
+const Loader = () => {
     return(
         <div className={styles.loader}>
             <div className={styles.loader__imgContainer}>
@@ -11,6 +10,6 @@ const Loader = observer(() => {
             </div>
         </div>
     );
-});
+};
 
 export default Loader;
