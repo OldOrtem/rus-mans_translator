@@ -7,11 +7,8 @@
 
 - npm run dev         
 
-[ссылка на бота](http://t.me/smar_test_bot)
 
+или 
 
-Demo:
-
-![alt text](https://github.com/OldOrtem/zodiac_web_app/blob/main/demo1.jpg?raw=true)
-
-![alt text](https://github.com/OldOrtem/zodiac_web_app/blob/main/demo2.jpg?raw=true)
+- docker build -t translate2win_front .      
+- docker run -p 3000:3000 translate2win_front

@@ -1,0 +1,30 @@
+@import '../../styles/mixins/breakpoints.scss';
+.footer{
+    font-family: "Noto Sans M";
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: var(--dark-text);
+    height: 5vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: 101;
+    
+
+    .text{
+        background-color: var(--output-back);
+        padding: 10px 15px;
+        border-radius: 12px;
+        line-height: 20px;
+        font-size: 14px;
+        @include mobile {
+            line-height: 15px;
+            font-size: 10px;
+        }
+    }
+    
+    
+}

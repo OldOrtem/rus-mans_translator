@@ -1,5 +1,5 @@
-import copyImg from "./../assets/copy.svg";
-import styles from "./styles/copyButt.module.scss";
+import copyImg from "./../assets/new/copy.svg";
+import Button from "./Button";
 import React from "react";
 
 interface CopyButtProps {
@@ -21,9 +21,10 @@ const CopyButt = ({ targetRef }: CopyButtProps) => {
     };
 
     return (
-        <div onClick={tap} className={styles.copy}>
-            <img src={copyImg} alt="<->" />
-        </div>
+        <>
+            <Button img={copyImg} tap={tap}  alt={"copy"}/>
+        </>
+        
     );
 };
 

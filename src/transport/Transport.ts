@@ -16,20 +16,21 @@ class Transport implements ITransport{
         return Transport.instance;
     }
 
-    public async post(text:string, language:string):Promise<string> {
+
+    public async post(text:string, from:string, to:string):Promise<string> {
         try {
             
-            // const response = await axios.post(this.apiUrl, {
-            //     sign: sign,
-            //     language: language,
-            //     period: 'today'
-            //   });
-            // return response.data.horoscope;
-            let newText = text;
-            if(language === "Мансийский"){
-                newText = text.toUpperCase();
-            }
-            return newText + "\n";
+            const response = await axios.post(this.apiUrl + "/translate/", {
+                text: text,
+                source_language: (from + '_Cyrl'),
+                target_language: (to + '_Cyrl')
+              });
+            return response.data.translated_text;
+            // let newText = text;
+            // if(language === "Мансийский"){
+            //     newText = text.toUpperCase();
+            // }
+            // return newText + "\n";
         
         } catch (error) {
             if (axios.isAxiosError(error)) {
@@ -42,4 +43,4 @@ class Transport implements ITransport{
     }
 }
 
-export default Transport.getInstance('https://poker247tech.ru/get_horoscope/')
+export default Transport.getInstance(import.meta.env.VITE_API_URL)
