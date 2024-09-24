@@ -28,7 +28,7 @@ To run the project locally, follow these steps:
 
 
 
-##Links
+## Links
 
 Check out a demo of the frontend [here](https://rus-mans-translator.vercel.app) (note: backend is not deployed).
 
